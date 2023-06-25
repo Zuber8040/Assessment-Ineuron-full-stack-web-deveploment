@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "aside article";
+  gap: 10px;
+}
+
+.header {
+  grid-area: header;
+  background-color: lightblue;
+  padding: 20px;
+}
+
+.aside-layout {
+  grid-area: aside;
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.article-layout {
+  grid-area: article;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  background-color: lightgray;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <header class="header">Header</header>
+        <aside class="aside-layout">Aside Layout</aside>
+        <article class="article-layout">
+          <div class="image-container">Image 1</div>
+          <div class="image-container">Image 2</div>
+          <div class="image-container">Image 3</div>
+        </article>
+      </div>
+      
+      
+
+</body>
+</html>
